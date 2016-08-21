@@ -1,0 +1,8 @@
+---
+applications:
+- name: therapy
+  instances: 1
+  memory: 128M
+  command: null
+  services:
+  - therapy-pgsql
