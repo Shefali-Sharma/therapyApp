@@ -1,0 +1,5 @@
+INSERT INTO 'therapydemo_folder' VALUES(1,"Upper_Body",0)
+INSERT INTO 'therapydemo_folder' VALUES(2,"Lower_Body",0)
+INSERT INTO 'therapydemo_folder' VALUES(3,"Head",1)
+INSERT INTO 'therapydemo_folder' VALUES(4,"Chest",1)
+INSERT INTO 'therapydemo_folder' VALUES(5,"Legs",2)
