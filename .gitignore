@@ -17,3 +17,4 @@ tests/.coverage
 build/
 tests/report/
 .ideas/
+restAPI/ongoing/v1.0/.idea/
