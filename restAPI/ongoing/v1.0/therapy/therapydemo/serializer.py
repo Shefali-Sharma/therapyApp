@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
-from .models import Folder
+from .models import *
+from django.contrib.auth.models import User
 
 class FolderSerializer(serializers.ModelSerializer):
 
@@ -10,4 +11,14 @@ class FolderSerializer(serializers.ModelSerializer):
         #fields = ('foldername','parentid')
         # to send all
         fields = '__all__'
+
+
+
+
+class VideoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Video
+        fields = '__all__'
+
 
