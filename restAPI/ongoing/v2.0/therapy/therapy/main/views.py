@@ -46,14 +46,15 @@ def get_children(request,type,parent):
     """
     if  type == 'video':
         videosids = Video_folder_mapping.objects.filter(folder_id=parent)
-        videos = Video.objects.filter(video_id=videosids)
+        videos = Video.objects.filter(video_folder_mapping__folder_id__exact=parent)
         serializer = VideoSerializer(videos, many=True)
         return JsonResponse(serializer.data, safe=False)
+        #return HttpResponse(videosids[0].video_id)
     elif type == 'folder':
         folders = Folder.objects.filter(parent_id=parent)
         serializer = FolderSerializer(folders, many=True)
         return JsonResponse(serializer.data, safe=False)
     else:
-        return HttpResponse("Unknown: " + "\t" + parent)
+        return HttpResponse("Unknown type:" + "\t" + type)
 
 

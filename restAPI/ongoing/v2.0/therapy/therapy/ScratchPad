@@ -1,9 +1,10 @@
+--cf login process for init.sh
 cf login -a https://api.run.pivotal.io
 cf create-service elephantsql turtle therapy-pgsql
 cf push --no-route -c "bash ./init_db.sh"
 cf push
 
-----Untracking files
+--Untracking files
 git rm -r --cached restAPI/ongoing/v1.0/.idea
 
 --create superuser
@@ -16,8 +17,9 @@ manage.py loaddata <fixturename>
 --Dump Data as fixtures:
 manage.py dumpdata
 
-API Documentation:
+--API Documentation:
 1. Get all Folders: http://161.85.98.97:8000/main/folders
 2. Get All Videos: http://161.85.98.97:8000/main/videos
 3. Get Children Folders of a folder: http://161.85.98.97:8000/main/children/folder/{parent-id}
 4. Get Children Videos of a folder: http://161.85.98.97:8000/main/children/video/{parent-id}
+
