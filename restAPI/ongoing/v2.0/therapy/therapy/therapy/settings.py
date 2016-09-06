@@ -85,6 +85,7 @@ DATABASES = {
         'HOST': '161.85.98.195',
         'PORT': '5432',
     }
+
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -116,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -127,9 +128,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 ## REST Service Variables
 REST_FRAMEWORK = {
@@ -183,3 +183,5 @@ LOGGING = {
 }
 
 #print("Settings __name__: " + __name__)
+
+
