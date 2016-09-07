@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
-from django.utils import timezone
-from .utilities import *
+from django.utils.timezone import now
 
 class Folder(models.Model):
     folder_id = models.IntegerField(primary_key=True,blank=False)
@@ -14,7 +13,7 @@ class Video(models.Model):
     video_id = models.IntegerField(blank=False,primary_key=True)
     video_name = models.CharField(max_length=255,blank=False)
     video_path = models.CharField(max_length=255,blank=False)
-    video_date_modified = models.DateTimeField(default=timezone.now())
+    video_date_modified = models.DateTimeField(default=now())
     #video_local_path = models.CharField(max_length=45,blank=True,default=get_path(video_id))
     #models.DateTimeField(auto_now_add=True)
     def __str__(self):

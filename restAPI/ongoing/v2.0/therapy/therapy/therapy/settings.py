@@ -25,7 +25,7 @@ SECRET_KEY = ')v-qg@5u(u!%unsf)f=4lwqp65tbn+8s+dvr-1lo)=q39zqf3f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,21 +76,42 @@ WSGI_APPLICATION = 'therapy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+from urlparse import urlparse
+url = urlparse(
+        os.environ.get(
+            'DATABASE_URL',
+            'postgres://wowbynku:uWohRpm9i615d7PdLsun1GHSd5txiscj@elmer.db.elephantsql.com:5432/wowbynku'
+            )
+        )
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'therapy',
-        'USER': 'pritam',
-        'PASSWORD': 'therapyapp',
-        'HOST': '161.85.98.195',
-        'PORT': '5432',
+        'NAME': url.path[1:],
+        'USER': url.username,
+        'PASSWORD': url.password,
+        'HOST': url.hostname,
+        'PORT': url.port,
     }
+}
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'therapy',
+#         'USER': 'pritam',
+#         'PASSWORD': 'therapyapp',
+#         'HOST': '161.85.98.195',
+#         'PORT': '5432',
+#     }
+# }
 
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
-}
+
 
 
 # Password validation

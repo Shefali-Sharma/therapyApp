@@ -1,0 +1,9 @@
+---
+applications:
+- name: therapy
+  instances: 1
+  memory: 128M
+  command: null
+  buildpack: https://github.com/cloudfoundry/buildpack-python.git
+  services:
+  - therapy-pgsql
