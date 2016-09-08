@@ -77,19 +77,19 @@ WSGI_APPLICATION = 'therapy.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'therapy',
-    #     'USER': 'pritam',
-    #     'PASSWORD': 'therapyapp',
-    #     'HOST': '161.85.98.195',
-    #     'PORT': '5432',
-    # }
-
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'therapy',
+        'USER': 'pritam',
+        'PASSWORD': 'therapyapp',
+        'HOST': '161.85.98.195',
+        'PORT': '5432',
     }
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 
