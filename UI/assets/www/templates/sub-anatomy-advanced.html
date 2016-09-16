@@ -1,0 +1,18 @@
+<ion-view view-title="Sub-Anatomy" name=sub-anatomy-advanced>
+  <ion-content>
+
+    <ion-list>
+      <ion-item class=" item item-thumbnail-left item-icon-right" ng-repeat="subanatomy in subanatomies" type="item-text-wrap" href="#/tab/exercises-advanced/{{subanatomy.folder_id}}">
+        <img ng-src="img/{{subanatomy.folder_name}}_tn.jpg">
+        <h2>{{subanatomy.folder_name}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <!--
+        <ion-option-button class="button" ng-click="download(chat)">
+          <img src="img\circle_arrow-down_download-512.png" class="image-download-thumb"/>
+        </ion-option-button>
+        !-->
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

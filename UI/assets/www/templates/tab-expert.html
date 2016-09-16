@@ -1,0 +1,16 @@
+<ion-view view-title="Expert">
+  <ion-content>
+    <ion-list>
+      <ion-item class=" item item-thumbnail-left item-icon-right" ng-repeat="anatomy in anatomies" type="item-text-wrap" href="#/tab/sub-anatomy-expert/{{anatomy.folder_id}}">
+        <img ng-src="img/{{anatomy.folder_name}}_tn.jpg">
+        <h2>{{anatomy.folder_name}}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <!--
+        <ion-option-button class="button" ng-click="download(anatomy)">
+          <img src="img\circle_arrow-down_download-512.png" class="image-download-thumb"/>
+        </ion-option-button>
+        !-->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

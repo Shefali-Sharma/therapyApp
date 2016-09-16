@@ -1,0 +1,23 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <!-- Beginner Tab -->
+  <ion-tab title="Beginner" icon-off="ion-ios-filling" icon-on="ion-ios-filling outline" href="#/tab/beginner">
+    <ion-nav-view name="tab-beginner"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Advanced Tab -->
+  <ion-tab title="Advanced" icon-off="ion-ios-filling" icon-on="ion-ios-filling outline" href="#/tab/advanced">
+    <ion-nav-view name="tab-advanced"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Expert Tab -->
+  <ion-tab title="Expert" icon-off="ion-ios-filling" icon-on="ion-ios-filling outline" href="#/tab/expert">
+    <ion-nav-view name="tab-expert"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

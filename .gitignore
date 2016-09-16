@@ -18,3 +18,10 @@ build/
 tests/report/
 .idea/
 *.log
+
+## For IONIC
+node_modules/
+temp/
+*.DS_Store
+*.log
+*.swp
